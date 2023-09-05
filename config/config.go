@@ -23,6 +23,7 @@ var (
 	RedisPass   string
 	RedisDBName string
 
+	// 邮箱
 	ValidEmail string
 	SmtpHost   string
 	SmtpEmail  string

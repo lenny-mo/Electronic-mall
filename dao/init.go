@@ -56,10 +56,9 @@ func DataBase(read, write string) {
 	migration() // 数据库迁移;
 }
 
-
-
 // NewDBClient 获取数据库连接
 func NewDBClient(ctx context.Context) *gorm.DB {
 	return _db.WithContext(ctx)
 }
+
 

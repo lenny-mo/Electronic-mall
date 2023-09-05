@@ -2,6 +2,7 @@ package main
 
 import (
 	"eletronicMall/config"
+	"eletronicMall/routes"
 )
 
 func main() {
@@ -9,4 +10,10 @@ func main() {
 
 	config.Init()
 
+	r := routes.NewRouter()
+	err := r.Run(config.HttpPort)
+	if err != nil {
+		panic(err)
+	}
+        
 }
